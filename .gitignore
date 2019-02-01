@@ -109,9 +109,7 @@ venv.bak/
 .idea/**/usage.statistics.xml
 
 # project specific
-data/
-tests/test_output.xlsx
 .idea/**/misc.xml
-.idea/**/python-oo-design-skills.iml
+.idea/**/python-matplotlib-packt.iml
 .idea/misc.xml
-.idea/python-oo-design-skills.iml
+.idea/python-matplotlib-packt.iml
