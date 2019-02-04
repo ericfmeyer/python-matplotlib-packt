@@ -1,4 +1,6 @@
-"""Matplotlib for Python Developers - Chapter 2."""
+"""Matplotlib for Python Developers - Chapter 2.
+
+Introduction to the basics of matplotlib."""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -84,7 +86,15 @@ def displaying_the_legend():
     plt.plot(values, values * 1.5, label='Normal')
     plt.plot(values, values * 3, label='Fast')
     plt.plot(values, values / 3, label='Slow')
+    plt.grid(True)
+    helper_decorate_plot(plt, title="Sample Growth of a Measure",
+                         xlabel="Samples",
+                         ylabel="Values Measured")
     plt.legend()
+    plt.savefig('plot123.png')
+    plt.savefig('plot123_2.png', dpi=200)
+    # show() has to come after savefig(), otherwise a blank image will be saved
+    # show() basically resets the image
     plt.show()
 
 
