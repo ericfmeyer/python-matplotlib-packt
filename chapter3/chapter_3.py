@@ -39,8 +39,33 @@ def controlling_all_at_once():
     plt.show()
 
 
+def using_keyword_arguments():
+    y = np.arange(1, 3, 0.3)
+    plt.plot(y, color='blue', linestyle='dashdot', linewidth=4,
+             marker='o', markerfacecolor='red', markeredgecolor='black',
+             markeredgewidth=3, markersize=12)
+    plt.show()
+
+
+def histogram_chart(num_bars=10):
+    y = np.random.randn(1000)
+    plt.hist(y, num_bars)
+    plt.show()
+
+
+def error_bar_chart():
+    x = np.arange(0, 4, 0.2)
+    y = np.exp(-x)
+    e1 = 0.1 * np.abs(np.random.randn(len(y)))
+    plt.errorbar(x, y, yerr=e1, fmt='.-')
+    plt.show()
+
+
 if __name__ == '__main__':
     controlling_colors()
     controlling_line_styles()
     controlling_markers()
     controlling_all_at_once()
+    using_keyword_arguments()
+    histogram_chart(25)
+    error_bar_chart()
